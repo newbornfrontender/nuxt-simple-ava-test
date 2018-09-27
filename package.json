@@ -1,0 +1,8 @@
+{
+  "name": "nuxt-simple-ava-test",
+  "version": "1.0.0",
+  "description": "Nuxt и Ava тест",
+  "repository": "https://github.com/newbornfrontender/nuxt-simple-ava-test.git",
+  "author": "Infant Frontender <newbornfrontender@gmail.com>",
+  "license": "MIT"
+}
