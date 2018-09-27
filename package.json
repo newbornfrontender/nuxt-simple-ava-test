@@ -9,7 +9,8 @@
     "dev": "cross-env NODE_ENV=development nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "test": "ava --serial --verbose"
   },
   "devDependencies": {
     "ava": "^1.0.0-beta.8",
