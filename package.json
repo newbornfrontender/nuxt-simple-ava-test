@@ -4,5 +4,15 @@
   "description": "Nuxt и Ava тест",
   "repository": "https://github.com/newbornfrontender/nuxt-simple-ava-test.git",
   "author": "Infant Frontender <newbornfrontender@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.0.0"
+  }
 }
