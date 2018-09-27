@@ -5,23 +5,23 @@ import test from 'ava';
 
 let nuxt = null;
 
-test.before(async () => {
+test.before('Запуск сервера и инициализация Nuxt.js', async () => {
   const config = {
     dev: false,
-    rootDir: resolve(__dirname, '..'),
+    rootDir: resolve(__dirname, '../..'),
   };
   nuxt = new Nuxt(config);
   await new Builder(nuxt).build();
   await nuxt.listen(4000, 'localhost');
 }, 30000);
 
-test('Route / exits and render HTML', async (t) => {
+test('Route / exits and render HTML', async t => {
   const context = {};
   const { html } = await nuxt.renderRoute('/', context);
   t.true(html.includes('<h1 class="red">Hello world!</h1>'));
 });
 
-test('Route / exits and render HTML with CSS applied', async (t) => {
+test('Route / exits and render HTML with CSS applied', async t => {
   const context = {};
   const { html } = await nuxt.renderRoute('/', context);
   const { window } = new JSDOM(html).window;
@@ -32,6 +32,6 @@ test('Route / exits and render HTML with CSS applied', async (t) => {
   t.is(window.getComputedStyle(element).color, 'red');
 });
 
-test.after('Closing server and nuxt.js', (t) => {
+test.after('Закрытие сервера и Nuxt.js', t => {
   nuxt.close();
 });
