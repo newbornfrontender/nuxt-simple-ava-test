@@ -12,7 +12,9 @@
     "generate": "nuxt generate"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0",
+    "cross-env": "^5.2.0"
+  },
+  "dependencies": {
     "nuxt": "^2.0.0"
   }
 }
